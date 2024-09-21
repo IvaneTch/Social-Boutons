@@ -1,0 +1,86 @@
+/* Position the container 40% from the top */
+.social-sidebar {
+  position: fixed; /* Keeps it fixed when scrolling */
+  top: 40%; /* 40% from the top of the viewport */
+  left: 20px; /* You can adjust this to position it from the left */
+  transform: translateY(-50%); /* Adjust to center the div vertically */
+}
+
+/* General button styling */
+.social-btn {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: white;
+  width: 50px; /* Ensure initial round size */
+  height: 50px;
+  border-radius: 50%; /* Keep buttons round */
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 0; /* Remove padding to ensure icon is centered */
+}
+
+/* Icons within buttons */
+.social-btn svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0; /* Keep the icon size constant */
+  transition: margin-left 0.4s ease; /* Smooth transition of icon position */
+}
+
+/* Hidden text initially */
+.social-btn span {
+  opacity: 0;
+  margin-left: 5px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, margin-left 0.4s ease;
+  position: absolute;
+  left: 60px;
+  font-size: 18px; /* Taille de la police modifiée */
+  font-family: "Roboto", sans-serif; /* Changer la famille de police */
+  font-weight: 500; /* Épaisseur intermédiaire de la police */
+  color: #ffffff; /* Couleur du texte blanche */
+}
+
+/* Button expands and shows text on hover */
+.social-btn:hover {
+  width: 250px; /* Expand width on hover */
+  border-radius: 25px; /* Smooth, pill-shaped button on hover */
+  justify-content: flex-start; /* Move icon to the left on hover */
+}
+
+.social-btn:hover svg {
+  margin-left: 10px; /* Move icon slightly to the right */
+}
+
+.social-btn:hover span {
+  opacity: 1; /* Show text on hover */
+}
+
+/* Button-specific colors */
+.devis {
+  background-color: #02e522; /* Green for "Demande de Devis" */
+}
+
+.call {
+  background-color: #6e75ec; /* Purple for the call button */
+}
+
+.postuler {
+  background-color: #ffd700; /* Yellow for "Postuler" */
+}
+
+.email {
+  background-color: #ff9800; /* Orange for the email button */
+}
+
+/* Ensure that the text has matching background color when expanded */
+.devis span,
+.call span,
+.postuler span,
+.email span {
+  color: white;
+}
